@@ -1,0 +1,64 @@
+{
+  "challenge": "challenge-2-rgb-thermal-isr",
+  "title": "Challenge 2: Day RGB + Thermal IR ISR Detection & Multi-Stream Tracking",
+  "hardware_target": "Axelera Embedded 110m (Metis AIPU, 1 GB LPDDR4x, 214 TOPS INT8)",
+  "recommended_model": "RFDETRNano (384x384 static ONNX opset 17)",
+  "classes": [
+    "armored_vehicle",
+    "vehicle",
+    "person"
+  ],
+  "splits": {
+    "train": {
+      "images": 712,
+      "rgb": {
+        "images": 308,
+        "boxes": {
+          "armored_vehicle": 221,
+          "person": 167,
+          "vehicle": 63
+        }
+      },
+      "thermal": {
+        "images": 404,
+        "boxes": {
+          "armored_vehicle": 177,
+          "vehicle": 203,
+          "person": 75
+        }
+      },
+      "dedup_roots": 13
+    },
+    "valid": {
+      "images": 484,
+      "rgb": {
+        "images": 253,
+        "boxes": {
+          "armored_vehicle": 116,
+          "vehicle": 111,
+          "person": 300
+        }
+      },
+      "thermal": {
+        "images": 231,
+        "boxes": {
+          "armored_vehicle": 143,
+          "vehicle": 64,
+          "person": 64
+        }
+      },
+      "dedup_roots": 9
+    },
+    "test": {
+      "images": 424,
+      "dedup_roots": 9
+    }
+  },
+  "calibration_images": {
+    "total": 200,
+    "rgb": 100,
+    "thermal": 100
+  },
+  "streams_eval_count": 8,
+  "leakage_verified": true
+}

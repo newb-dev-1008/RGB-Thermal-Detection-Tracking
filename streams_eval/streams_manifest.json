@@ -1,0 +1,93 @@
+{
+  "streams": [
+    {
+      "sequence": "seq_0001",
+      "split": "valid",
+      "width": 1280,
+      "height": 590,
+      "fps": 30,
+      "frame_count": 137,
+      "classes": [
+        "armored_vehicle"
+      ],
+      "gt_boxes": 137,
+      "modality": "thermal"
+    },
+    {
+      "sequence": "seq_0002",
+      "split": "valid",
+      "width": 1280,
+      "height": 576,
+      "fps": 30,
+      "frame_count": 128,
+      "classes": [
+        "person",
+        "vehicle"
+      ],
+      "gt_boxes": 256,
+      "modality": "thermal"
+    },
+    {
+      "sequence": "seq_0003",
+      "split": "test",
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "frame_count": 72,
+      "modality": "thermal"
+    },
+    {
+      "sequence": "seq_0004",
+      "split": "test",
+      "width": 1920,
+      "height": 810,
+      "fps": 30,
+      "frame_count": 141,
+      "modality": "thermal"
+    },
+    {
+      "sequence": "seq_0005",
+      "split": "valid",
+      "width": 720,
+      "height": 1270,
+      "fps": 30,
+      "frame_count": 96,
+      "classes": [
+        "armored_vehicle"
+      ],
+      "gt_boxes": 96,
+      "modality": "rgb"
+    },
+    {
+      "sequence": "seq_0006",
+      "split": "valid",
+      "width": 1080,
+      "height": 1080,
+      "fps": 30,
+      "frame_count": 86,
+      "classes": [
+        "vehicle"
+      ],
+      "gt_boxes": 248,
+      "modality": "rgb"
+    },
+    {
+      "sequence": "seq_0007",
+      "split": "test",
+      "width": 720,
+      "height": 1270,
+      "fps": 30,
+      "frame_count": 96,
+      "modality": "rgb"
+    },
+    {
+      "sequence": "seq_0008",
+      "split": "test",
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "frame_count": 150,
+      "modality": "rgb"
+    }
+  ]
+}

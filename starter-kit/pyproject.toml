@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "axelera-hackathon-challenge-2-rgb-thermal-isr"
+version = "0.1.0"
+description = "Standalone starter kit for challenge-2-rgb-thermal-isr on Axelera Embedded 110m (Metis AIPU)"
+requires-python = ">=3.11"
+dependencies = [
+    "rfdetr[onnx,train]>=1.4.0",
+    "onnx>=1.16.0",
+    "onnxruntime>=1.20.0",
+    "onnxscript>=0.2.0",
+    "torch>=2.5.0",
+    "torchvision>=0.20.0",
+    "pillow>=10.4.0",
+    "numpy>=1.26.0",
+    "scipy>=1.13.0",
+]
+
+[tool.setuptools]
+py-modules = [
+    "train_rfdetr",
+    "export_rfdetr_axelera",
+    "predict_onnx_baseline",
+    "evaluate_submissions",
+]

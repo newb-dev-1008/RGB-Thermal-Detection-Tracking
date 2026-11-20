@@ -1,0 +1,59 @@
+{
+  "note": "Historical smoke-test reference metrics (1 epoch for RFDETRNano C1/C2, 2 epochs for MobileNetV3-Small C4/C5), evaluated through static ONNX Runtime on valid/ only. C4 predates the checkpoint-ranking alignment fix; fresh training may select a different epoch. C5 used wake_thresh=0.55. These results were not regenerated for the packaging fixes and do not measure Metis performance or system energy.",
+  "challenge_2": {
+    "onnx_full": {
+      "path_size_mb": 102.66,
+      "input": {
+        "name": "input",
+        "shape": [
+          1,
+          3,
+          384,
+          384
+        ]
+      },
+      "outputs": {
+        "dets": [
+          1,
+          300,
+          4
+        ],
+        "labels": [
+          1,
+          300,
+          4
+        ]
+      },
+      "cpu_ort_median_ms": 39.54
+    },
+    "onnx_backbone": {
+      "path_size_mb": 88.95,
+      "outputs": {
+        "features": [
+          1,
+          256,
+          24,
+          24
+        ]
+      }
+    },
+    "detect_valid": {
+      "mAP50": 0.3489,
+      "mAP50_95": 0.2487,
+      "small_AP50": 0.0,
+      "small_AP50_95": 0.0,
+      "num_images": 484,
+      "rgb_mAP50": 0.5263,
+      "rgb_mAP50_95": 0.3667,
+      "thermal_mAP50": 0.1799,
+      "thermal_mAP50_95": 0.1255
+    },
+    "mot_valid": {
+      "MOTA": -0.076,
+      "IDF1": 0.2353,
+      "track_continuity": 0.2055,
+      "id_switches": 9,
+      "total_gt_boxes": 737
+    }
+  }
+}
