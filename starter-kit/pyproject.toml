@@ -22,7 +22,12 @@ dependencies = [
 [tool.setuptools]
 py-modules = [
     "train_rfdetr",
+    "train_dual_modality",
+    "augmentations_thermal",
+    "balanced_dataset",
     "export_rfdetr_axelera",
     "predict_onnx_baseline",
+    "predict_onnx_improved",
     "evaluate_submissions",
+    "preprocess",
 ]
